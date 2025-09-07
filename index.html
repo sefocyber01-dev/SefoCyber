@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>SefoCyber</title>
+    <title>SefoCyber Gün Sayacı</title>
     <style>
         body {
             display: flex;
@@ -12,11 +12,29 @@
             background-color: #1e1e1e;
             color: #00ff00;
             font-family: Arial, sans-serif;
-            font-size: 3em;
+            font-size: 2.5em;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    SefoCyber 💖
+    <div>
+        Sefo & Eylül <span id="days">0</span> gündür beraberiz hayallerle 💖
+    </div>
+
+    <script>
+        const startDate = new Date(2024, 8, 9); // Başlangıç tarihi
+        const daysSpan = document.getElementById('days');
+
+        function updateDays() {
+            const now = new Date();
+            const diffTime = now - startDate;
+            const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+            daysSpan.textContent = diffDays;
+        }
+
+        updateDays();
+        setInterval(updateDays, 1000 * 60 * 60);
+    </script>
 </body>
 </html>
