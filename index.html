@@ -10,16 +10,16 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: #111;
+    background: #1a1a1a;
     color: #fff;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
   }
   h1 {
     font-size: 5em;
     margin: 20px;
   }
   button {
-    padding: 10px 20px;
+    padding: 15px 30px;
     font-size: 1.5em;
     cursor: pointer;
     border: none;
@@ -31,6 +31,10 @@
   button:hover {
     background: #ff5722;
   }
+  audio {
+    margin-top: 30px;
+    width: 300px;
+  }
 </style>
 </head>
 <body>
@@ -38,7 +42,7 @@
 <h1 id="counter">0</h1>
 <button onclick="increase()">+</button>
 
-<audio id="music" src="https://raw.githubusercontent.com/kullaniciAdi/repoAdi/main/eypio_kalbini_verdin.mp3" autoplay loop controls></audio>
+<audio id="music" src="eypio_kalbini_verdin.mp3" autoplay loop controls></audio>
 
 <script>
 let count = 0;
